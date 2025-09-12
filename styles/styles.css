@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cherie: #C91959;
+  --color-cherie-50: #fdf2f7;
+  --color-cherie-100: #fce7f2;
+  --color-cherie-200: #fbcfe6;
+  --color-cherie-300: #f9a8d0;
+  --color-cherie-400: #f472af;
+  --color-cherie-500: #ec4890;
+  --color-cherie-600: #db276e;
+  --color-cherie-700: #c91959; /* original */
+  --color-cherie-800: #9d1746;
+  --color-cherie-900: #83183d;
+  --color-cherie-950: #500720;
+}
