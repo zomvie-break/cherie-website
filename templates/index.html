@@ -1,7 +1,89 @@
 {% extends "base.html" %}
 
+{% block title %}
+  <title>Cherie Travel | Agencia de viajes</title>
+{% endblock title %}
+
 {% block content %}
-<h1 class="title">
-  This is my blog made with Zola.
-</h1>
+<main class="flex flex-col justify-center items-center">
+  <!--
+  this is a comment
+  -->
+  <div class="bg-[url(images/00-index-bg.jpg)] bg-fixed bg-cover flex
+    justify-center items-center h-96 w-screen">
+    <h1 class="">
+      Cherie Travel | Agencia de viajes
+    </h2>
+  </div>
+
+  <div class="sections-container">
+    <section class="about">
+      <h2 class="title">
+        Viaja con nosotros
+      </h2>
+
+      <div>
+        <p>
+        Haz realidad el viaje de tus sueños con experiencias únicas y
+        personalizadas, acompañadas de la tranquilidad de viajar con expertos a
+        tu lado. Desde Disney y Universal hasta cruceros y destinos
+        internacionales, planificamos cada detalle para que solo te dediques a
+        disfrutar. Contáctanos y empieza a crear recuerdos inolvidables.
+        </p>
+      </div>
+
+    </section>
+
+    <section class="characteristics">
+      <h2 class="title">
+        Lo que nos hace únicos
+      </h2>
+
+      <ul class="flex flex-row flex-wrap gap-10 justify-center">
+        <li class="char-card">Contamos con más de 3 años de
+          experiencia en viajes.
+          <div class="absolute bottom-10 left-1 h-1 w-3/4 bg-cherie-50"></div>
+        </li>
+        <li class="char-card">Ofrecemos planificación de viajes
+          personalizados
+          <div class="absolute bottom-10 left-1 h-1 w-3/4 bg-cherie-50"></div>
+        </li>
+        <li class="char-card">Acceso a tours grupales alrededor del
+          mundo
+          <div class="absolute bottom-10 left-1 h-1 w-3/4 bg-cherie-50"></div>
+        </li>
+        <li class="char-card">Somos agentes certificados Disney y
+          Universal.
+          <div class="absolute bottom-10 left-1 h-1 w-3/4 bg-cherie-50"></div>
+        </li>
+        <li class="char-card">Creamos itinerarios hechos a la
+          medida
+          <div class="absolute bottom-10 left-1 h-1 w-3/4 bg-cherie-50"></div>
+        </li>
+        <li class="char-card">Brindamos soporte de concierge disponible 24/7 para tu
+          tranquilidad.
+          <div class="absolute bottom-10 left-1 h-1 w-3/4 bg-cherie-50"></div>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="destinations">
+      <h2 class="title">
+        Conoce nuestro destinos
+      </h2>
+      <div>
+        {% set destinos = get_section(path="destinos/_index.md") %}
+        <div class="flex flex-row gap-10 justify-center">
+          {% for destino in destinos.pages %}
+            <div class="dest-card">
+              {{ destino.title }}
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </section>
+  </div>
+</main >
 {% endblock content %}
