@@ -14,3 +14,23 @@
   --color-cherie-900: #83183d;
   --color-cherie-950: #500720;
 }
+
+.sections-container {
+  @apply w-5xl flex flex-col;
+}
+
+.title {
+  @apply font-light italic py-15 justify-center text-5xl;
+}
+
+.about, .characteristics {
+  @apply bg-white gap-20;
+}
+
+.char-card {
+  @apply px-2 py-2 bg-white max-w-48 h-48 relative rounded-md;
+}
+
+.dest-card {
+  @apply px-2 py-2 bg-cherie-700 max-w-48 h-48 relative rounded-md;
+}
