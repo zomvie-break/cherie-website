@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% block head %} 
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  {% block title%} 
     <title>Cherie Travel</title>
-  </head>
-{% endblock head %}
+  {% endblock title%}
+  <link href="./styles.css" rel="stylesheet">
+</head>
 
-<body>
-  <section class="section">
-    <div class="container">
+<body class="min-h-screen bg-white">
       {% block content %} {% endblock content %}
-    </div>
-  </section>
 </body>
 
 </html>
