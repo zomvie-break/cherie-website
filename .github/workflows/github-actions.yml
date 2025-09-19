@@ -7,10 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
-      - name: install and run zola
+      - name: install zola
         uses: taiki-e/install-action@v2
         with:
           tool: zola@0.21.0
+      - name: build website using zola
         run: zola build
       - name: deploy to server
         uses: burnett01/rsync-deployments@7.1.0
