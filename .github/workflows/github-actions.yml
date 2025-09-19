@@ -1,0 +1,24 @@
+name: Build and deploy website
+on:
+  push:
+    branches: [master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: install and run zola
+        uses: taiki-e/install-action@v2
+        with:
+          tool: zola@0.21.0
+        run: zola build
+      - name: deploy to server
+        uses: burnett01/rsync-deployments@7.1.0
+          with:
+            switches: -avzr --delete
+            path: public/
+            remote_path: ${{ secrets.REMOTE_PATH }}
+            remote_host: ${{ secrets.REMOTE_HOST }}
+            remote_port: ${{ secrets.REMOTE_PORT }}
+            remote_user: ${{ secrets.REMOTE_USER }}
+            remote_key: ${{ secrets.REMOTE_PRIVATE_KEY }}
