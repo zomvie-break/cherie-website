@@ -15,11 +15,11 @@ jobs:
         run: zola build
       - name: deploy to server
         uses: burnett01/rsync-deployments@7.1.0
-          with:
-            switches: -avzr --delete
-            path: public/
-            remote_path: ${{ secrets.REMOTE_PATH }}
-            remote_host: ${{ secrets.REMOTE_HOST }}
-            remote_port: ${{ secrets.REMOTE_PORT }}
-            remote_user: ${{ secrets.REMOTE_USER }}
-            remote_key: ${{ secrets.REMOTE_PRIVATE_KEY }}
+        with:
+          switches: -avzr --delete
+          path: public/
+          remote_path: ${{ secrets.REMOTE_PATH }}
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_port: ${{ secrets.REMOTE_PORT }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.REMOTE_PRIVATE_KEY }}
