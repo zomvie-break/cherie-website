@@ -1,5 +1,7 @@
 +++
 title = "Disney"
+[extra]
+image = "images/destinos/disney.png"
 +++
 
 Disney es mucho más que un destino: es un universo de sueños, aventuras y

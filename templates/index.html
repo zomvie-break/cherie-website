@@ -78,6 +78,7 @@
           {% for destino in destinos.pages %}
             <div class="dest-card">
               {{ destino.title }}
+              <img src={{ destino.extra.image | safe }} alt={{ destino.title }} class="h-20 w-20">
             </div>
           {% endfor %}
         </div>
