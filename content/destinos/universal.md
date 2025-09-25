@@ -1,6 +1,6 @@
 +++
 title = "Universal"
 [extra]
-image = "destinos/universal.png"
+image = "images/destinos/universal.png"
 +++
 some universal text
