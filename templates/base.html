@@ -10,7 +10,8 @@
 </head>
 
 <body class="min-h-screen bg-white">
-      {% block content %} {% endblock content %}
+  {% include "navbar.html" %}
+  {% block content %} {% endblock content %}
 </body>
 
 </html>
