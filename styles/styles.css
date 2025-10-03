@@ -28,9 +28,9 @@
 }
 
 .char-card {
-  @apply px-2 py-2 bg-white max-w-48 h-48 relative rounded-md;
+  @apply px-2 py-2 bg-white max-w-48 h-48 relative rounded-md shadow-lg;
 }
 
 .dest-card {
-  @apply px-2 py-2 bg-cherie-700 max-w-48 h-48 relative rounded-md;
+  @apply flex flex-col px-2 py-2 bg-cherie-200 max-w-48 relative rounded-md shadow-lg hover:bg-cherie-300 hover:shadow-xl;
 }

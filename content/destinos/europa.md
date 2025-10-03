@@ -1,8 +1,8 @@
 +++
-title = "Disney"
-description = "esto es disney"
+title = "Europa"
+description = "esto es cruceros"
 [extra]
-image = "images/destinos/disney.png"
+image = "images/destinos/europa.png"
 +++
 
 Disney es mucho más que un destino: es un universo de sueños, aventuras y

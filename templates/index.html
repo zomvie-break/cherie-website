@@ -74,12 +74,17 @@
       </h2>
       <div>
         {% set destinos = get_section(path="destinos/_index.md") %}
-        <div class="flex flex-row gap-10 justify-center">
+        <div class="flex flex-row flex-wrap gap-10 justify-center">
           {% for destino in destinos.pages %}
-            <div class="dest-card">
-              {{ destino.title }}
-              <img src={{ destino.extra.image | safe }} alt={{ destino.title }} class="h-20 w-20">
-            </div>
+            <a href={{ destino.permalink }} class="dest-card">
+              <h3 class="self-center text-lg font-bold italic">
+                {{ destino.title }}
+              </h3>
+              <img src={{ destino.extra.image | safe }} alt={{ destino.title }} class="">
+              <p class="mt-4">
+                {{ destino.description }}
+              </p>
+            </a>
           {% endfor %}
         </div>
 
